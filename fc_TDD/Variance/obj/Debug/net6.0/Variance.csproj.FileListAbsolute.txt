@@ -1,0 +1,15 @@
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/bin/Debug/net6.0/Variance
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/bin/Debug/net6.0/Variance.deps.json
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/bin/Debug/net6.0/Variance.runtimeconfig.json
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/bin/Debug/net6.0/Variance.dll
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/bin/Debug/net6.0/ref/Variance.dll
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/bin/Debug/net6.0/Variance.pdb
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/Variance.csproj.AssemblyReference.cache
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/Variance.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/Variance.AssemblyInfoInputs.cache
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/Variance.AssemblyInfo.cs
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/Variance.csproj.CoreCompileInputs.cache
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/Variance.dll
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/ref/Variance.dll
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/Variance.pdb
+/Users/jinyoung/Documents/TDD/fc_TDD/Variance/obj/Debug/net6.0/Variance.genruntimeconfig.cache
