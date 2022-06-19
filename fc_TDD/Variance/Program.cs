@@ -1,43 +1,42 @@
-﻿using System;
+﻿
 
-namespace MyApp // Note: actual namespace depends on the project name.
+using System;
+using System.Linq;
+
+namespace Variance
 {
-    internal class Program
+    class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) => Console.WriteLine(args.Length switch
         {
-            if (args.Length ==0)
-            {
-                Console.WriteLine("데이터가 입력되지 않았습니다");
-                return;
-            }
-            else if (args.Length == 1)
-            {
-                Console.WriteLine("두 개 이상의 데이터를 입력해주세요");
-                return;
-            }
-            double[] s = new double[args.Length];
-            for (int i = 0; i < s.Length; i++)
-                {
-                    s[i] = double.Parse(args[i]);
-                }
-                double sum = 0.0;
-                for (int i = 0; i < s.Length; i++)
-                {
-                    sum += s[i];
-                }
+            0 => "입력된 데이터가 없습니다.",
+            1 => "데이터가 부족해 분산을 계산할 수 없습니다. 2개 이상의 데이터를 입력해 주세요.",
+            _ => GetCalculationOutput(args),
+        });
 
-                double mean = sum / s.Length;
+        private static string GetCalculationOutput(string[] args)
+        {
+            double[] source = ParseArguments(args);
+            double variance = CalculateVariance(source);
+            return $"분산: {variance}";
+        }
 
-                double sumOfSquares = 0.0;
-                for (int i = 0; i < s.Length; i++) 
-                {
-                    sumOfSquares += (s[i] - mean) *  (s[i] - mean);
-                }
+        private static double[] ParseArguments(string[] args)
+            => args.Select(double.Parse).ToArray();
 
-                double variance =  sumOfSquares / (s.Length -1);
+        private static double CalculateVariance(double[] source)
+        {
+            double sumOfSquares = CalculateSumOfSquares(source);
+            int degreesOfFreedom = source.Length - 1;
+            return sumOfSquares / degreesOfFreedom;
+        }
 
-            Console.WriteLine($"분산 : {variance}");
+        private static double CalculateSumOfSquares(double[] source)
+        {
+            double mean = source.Average();
+            return source.Select(x => mean - x)
+                         .Select(d => d * d)
+                         .Sum();
         }
     }
 }
