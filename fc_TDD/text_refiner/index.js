@@ -1,6 +1,11 @@
 function refineText(source, options) {
 
-    return [normalizeWhiteSpaces, compactWhiteSpaces, maskBannedWords].reduce((value, filter) => filter(value, options), source);
+    return [
+        normalizeWhiteSpaces,
+        compactWhiteSpaces,
+        maskBannedWords,
+        trimWhitespaces,
+    ].reduce((value, filter) => filter(value, options), source);
 
 
 
@@ -8,6 +13,10 @@ function refineText(source, options) {
         return source
             .replace("\t", " ");
     }
+}
+
+function trimWhitespaces(value) {
+    return value.trim();
 }
 
 function maskBannedWords(source, options) {
